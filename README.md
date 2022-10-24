@@ -21,14 +21,14 @@ http://localhost:4200/
 to run backend -> install all dependencies from package.json
 go to backend folder
 
-npm install -g nodemon;
+1. npm install -g nodemon;
 
-npm install --save bcrypt dotenv express express-mongo-sanitize express-rate-limit helmet hpp jsonwebtoken mongoose mongoose-unique-validator morgan multer password-validator validator xss-clean
+2. npm install --save bcrypt dotenv express express-mongo-sanitize express-rate-limit helmet hpp jsonwebtoken mongoose mongoose-unique-validator morgan multer password-validator validator xss-clean
 
-to run the server use "nodemon server"
+3. to run the server use "nodemon server"
 backend server turn on port 3000  
 
-go to backend folder -> create a root file ".env" to connect the app to database MongoDB Atlas. 
+4. go to backend folder -> create a root file ".env" to connect the app to database MongoDB Atlas. 
 in the ".env" you must write this:
 ````text
 MONGO_DB_USER = "new_test_user"
