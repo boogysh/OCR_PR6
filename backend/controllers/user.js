@@ -29,13 +29,10 @@ exports.signup = (req, res, next) => {
         .catch((error) =>{
           res.status(400).json({ error })
         });
-    } else {
-        console.error("Email or password, invalid format");
-        console.error(
-            "invalid part of password :" +
-              passwordSchema.validate(req.body.password, { list: true })
-        );
-        console.error(passwordSchema.validate('joke', { details: true }));
+    } 
+    else {
+      res.status(400).json([{error: "Verify your email and password."},{ error: 
+      "The password must contain between 8 and 18 characters, minimum one capital letter, minimum one number and minimum one special character"}])
     }
   };
 exports.login = (req, res, next) => {
