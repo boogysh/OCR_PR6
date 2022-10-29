@@ -35,7 +35,7 @@ MONGO_DB_USER = "new_test_user"
 MONGO_DB_PASSWORD = "00OufiW6hwCvZWxu"
 MONGO_DB_LEVEL_ACCESS = "?retryWrites=true&w=majority"
 
-RANDOM_TOKEN = "RANDOM_TOKEN_JWT"                        
+RANDOM_TOKEN = "THIS_IS_TOP_SECRET_AND_SAFTY"                        
 RANDOM_TOKEN_VALABILITY = "24h"
 
 ````
