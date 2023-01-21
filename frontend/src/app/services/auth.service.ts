@@ -16,7 +16,8 @@ export class AuthService {
               private router: Router) {}
 
   createUser(email: string, password: string) {
-    return this.http.post<{ message: string }>('http://localhost:3000/api/auth/signup', {email: email, password: password});
+    // return this.http.post<{ message: string }>('http://localhost:3000/api/auth/signup', {email: email, password: password});
+    return this.http.post<{ message: string }>('https://hot-takes-back.vercel.app/api/auth/signup', {email: email, password: password});
   }
 
   getToken() {
@@ -28,7 +29,8 @@ export class AuthService {
   }
 
   loginUser(email: string, password: string) {
-    return this.http.post<{ userId: string, token: string }>('http://localhost:3000/api/auth/login', {email: email, password: password}).pipe(
+    // return this.http.post<{ userId: string, token: string }>('http://localhost:3000/api/auth/login', {email: email, password: password}).pipe(
+    return this.http.post<{ userId: string, token: string }>('https://hot-takes-back.vercel.app/api/auth/login', {email: email, password: password}).pipe(
       tap(({ userId, token }) => {
         this.userId = userId;
         this.authToken = token;
